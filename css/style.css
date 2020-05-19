@@ -1,0 +1,135 @@
+*,
+*::after,
+*::before {
+margin: 0;
+padding: 0;
+box-sizing: inherit;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  background: linear-gradient(-90deg, rgba(0, 255, 210, 0.5), rgba(0, 204, 255, 0.5), rgba(255, 0, 242, 0.5), rgba(180, 0, 255, 0.5));
+	background-size: 190% 190%;
+	animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.chat {
+    margin-top: 2.5vw;
+    padding-top: 0.5vw;
+    padding-bottom: 1.5vw;
+    border-radius: 20px; 
+    box-shadow:
+    inset 0 0 50px #fff,
+    inset 20px 0 80px rgba(255, 34, 237, 0.5),
+    inset -20px 0 80px rgba(0, 255, 210, 0.5),
+    inset 20px 0 300px rgba(255, 34, 237, 0.5),
+    inset -20px 0 300px rgba(0, 255, 210, 0.5),
+    0 0 50px #fff,
+    -10px 0 80px rgba(255, 34, 237, 0.5),
+    10px 0 80px rgba(0, 255, 210, 0.5);
+}
+
+h2 {
+  font-weight: 700;
+}
+
+h2, h5 {
+  color: #fff;
+  animation: neon 1.5s ease-in-out infinite alternate;
+  transition: all 0.5s;
+  text-shadow:
+  inset 0 0 0px #fff,
+  0 0 15px #fff,
+  -10px 0 40px rgb(255, 34, 237),
+  10px 0 40px rgb(0, 255, 210);
+}
+
+h2:hover {
+    color: rgb(255, 34, 237);
+    animation: none;
+  }
+
+  @keyframes neon {
+    from {
+      text-shadow: 0 0 0px #fff, 0 0 5px #fff, 0 0 10px #fff, 0 0 15px rgb(255, 34, 237);, 0 0 70px rgb(255, 34, 237);, 0 0 80px rgb(255, 34, 237);, 0 0 100px rgb(255, 34, 237);, 0 0 150px rgb(255, 34, 237);
+    }
+    to {
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px rgb(255, 34, 237);, 0 0 35px rgb(255, 34, 237);, 0 0 40px rgb(255, 34, 237);, 0 0 50px rgb(255, 34, 237);, 0 0 75px rgb(255, 34, 237);
+    }
+  } 
+
+.display_messages {
+    margin-bottom: 2vw;
+}
+
+.text_box {
+  border: 2px solid white;
+  border-radius: 4px;
+  padding: 0.8vw;
+  font-weight: 600;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.messages {
+  height: 25vw;
+  padding-top: -1vw;
+  padding-bottom: 2vw;
+  overflow: scroll;
+}
+
+.users {
+  height: 25vw;
+  padding-bottom: 2vw;
+  margin-left: -2vw;
+  overflow: scroll;
+}
+
+.enter_input {
+  border: 2px solid white;
+  border-radius: 4px;
+  padding: 0.3vw;
+  padding-left: 0.8vw;
+  font-weight: 600;
+}
+
+.enter_message {
+  width: 40vw;
+}
+
+.border_box {
+  border: 2px solid white;
+  border-radius: 20px;
+  box-shadow:
+    inset 0 0 25px #fff,
+    inset 10px 0 40px rgb(255, 34, 237),
+    inset -10px 0 40px rgb(0, 255, 221),
+    inset 10px 0 150px rgb(255, 34, 237),
+    inset -10px 0 150px rgb(0, 255, 221),
+    0 0 25px #fff,
+    -10px 0 40px rgb(255, 34, 237),
+    10px 0 40px rgb(0, 255, 221);
+}
+
+.reverse_border_box {
+  border: 2px solid white;
+  border-radius: 20px;
+  box-shadow:
+    inset 0 0 100px #fff,
+    0 0 25px #fff,
+    -5px 0 30px rgb(255, 34, 237),
+    5px 0 30px rgb(0, 255, 221);
+} 
+
