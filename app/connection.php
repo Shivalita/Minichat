@@ -1,5 +1,4 @@
 <?php
-
     try
     {
         $database = new PDO('mysql:host=127.0.0.1;dbname=minichat;charset=utf8',
@@ -11,3 +10,4 @@
     {
         die('Erreur : ' . $e->getMessage());
     }
+?>

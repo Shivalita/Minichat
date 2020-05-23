@@ -1,13 +1,3 @@
-<?php
-
-if (isset($_COOKIE['nickname'])) {
-    $currentUser = $_COOKIE['nickname'];
-} else {
-    $currentUser = '';
-}
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,10 +23,10 @@ if (isset($_COOKIE['nickname'])) {
         </div>
 
         <div class="row justify-content-around my-3 display_messages">
-            <div class="col-8 text_box reverse_border_box messages">
+            <div class="col-8 text_box messages">
                 <!-- Messages content -->
             </div>
-            <div class="col-2 text_box reverse_border_box users">
+            <div class="col-2 text_box users">
                 <!-- Users content -->
             </div>
         </div>
@@ -44,7 +34,7 @@ if (isset($_COOKIE['nickname'])) {
         <form id="form" class="form">
             <div class="row justify-content-center my-3 input-group send_message">
                 <div class="col-2 mt-3">
-                    <input type="text" id="nickname" name="nickname" minlength="2" class="enter_input reverse_border_box enter_nickname" placeholder="Pseudo" value="<?=$currentUser?>">
+                    <input type="text" id="nickname" name="nickname" minlength="2" class="enter_input reverse_border_box enter_nickname" placeholder="Pseudo">
                 </div>
                 <div class="col-12 mt-4 text-center">
                     <input type="text" id="message" name="message" minlength="1" maxlength="255" class="enter_input reverse_border_box enter_message" placeholder="Ton message">
@@ -57,10 +47,10 @@ if (isset($_COOKIE['nickname'])) {
     </div>
         
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="javascript/messages.js"></script>
-<script type="text/javascript" src="javascript/users.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="javascript/messages.js"></script>
+    <script type="text/javascript" src="javascript/users.js"></script>
 </body>
 </html>

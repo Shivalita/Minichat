@@ -33,9 +33,8 @@ let allMessages = document.querySelectorAll('p');
 let htmlStart = '<p class="text_list">';
 let htmlEnd = '</p>'; 
 let lastMessage = '';
-var messagesList = [];
-var MessagesFlag = false;
-
+let messagesList = [];
+let MessagesFlag = false;
 
 function setMessages(messages) {
     for (let i = 0; i < messages.length; i++) {
@@ -55,13 +54,11 @@ function setMessages(messages) {
     return messagesList;
 }
 
-
 function displayMessages(messagesList) {
     messagesList.forEach(message => {
         messagesDiv.innerHTML += message; 
     });            
 }
-
 
 function checkMessages(messages) {   
     let messagesList = setMessages(messages);
@@ -79,7 +76,6 @@ function checkMessages(messages) {
         allMessages = document.querySelectorAll('p'); 
     }    
 }
-
 
 function refreshMessages() {  
     fetch('./partials/messages.php')

@@ -1,5 +1,4 @@
 <?php
-
     include('connection.php');
 
     function getIp() {
@@ -12,7 +11,6 @@
         }
         return $ip;
     }
-
 
     $json = file_get_contents('php://input');
     $data = json_decode($json);
@@ -36,20 +34,18 @@
         $message = htmlspecialchars($_POST['message']);
         $ip_address = getIp();
         $datetime = date('Y-m-d H:i:s');   
-        setcookie('nickname', $nickname, time() + 365*24*3600, '/', null, false, true);
     
         $checkUserRecord = $database->prepare("SELECT * from users WHERE nickname = ?");
         $checkUserRecord->execute(array($nickname));
         $userAlreadyRecorded = $checkUserRecord->fetch(PDO::FETCH_ASSOC);
    
         if (!$userAlreadyRecorded) { 
-            $userRequest = $database->prepare('INSERT INTO users(nickname, ip_address, color, created_at) 
-            VALUES(:nickname, :ip_address, :color, :created_at)');
+            $userRequest = $database->prepare('INSERT INTO users(nickname, ip_address, created_at) 
+            VALUES(:nickname, :ip_address, :created_at)');
         
             $userRequest->execute(array(
             'nickname' => $nickname,
             'ip_address' => $ip_address,
-            'color' => '',
             'created_at' => $datetime
             ));
         }
@@ -70,3 +66,4 @@
     }
 
     header('location: ../index.php');
+?>

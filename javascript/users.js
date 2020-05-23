@@ -1,12 +1,10 @@
-
 let usersDiv = document.querySelector('.users');
 let allUsers = document.querySelectorAll('.user');
 let usersHtmlStart = '<p class="text_list user">';
 let usersHtmlEnd = '</p>'; 
 let lastUser = '';
-var usersList = [];
-var userFlag = false;
-
+let usersList = [];
+let userFlag = false;
 
 function setUsers(users) {
     for (let i = 0; i < users.length; i++) {
@@ -22,13 +20,11 @@ function setUsers(users) {
     return usersList;
 }
 
-
 function displayUsers(usersList) {
     usersList.forEach(user => {
         usersDiv.innerHTML += user; 
     });            
 }
-
 
 function checkUsers(users) {   
     let usersList = setUsers(users);
@@ -46,7 +42,6 @@ function checkUsers(users) {
         allUsers = document.querySelectorAll('.user');
     }    
 }
-
 
 function refreshUsers() {  
     fetch('./partials/users.php')
